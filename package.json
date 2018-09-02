@@ -1,7 +1,7 @@
 {
   "name": "landing41017",
   "version": "1.0.0",
-  "description": "Лендинг сверстанный на заказ для студии. Дизайн был предоставлен.",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
