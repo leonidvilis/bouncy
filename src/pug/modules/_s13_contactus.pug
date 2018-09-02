@@ -1,0 +1,45 @@
+section#contactus
+    #c1.column
+        .container
+            .column
+                h3.s-title Contact us
+                p.p-text At vero eos et accusamus et iusto odio dignissimos ducimus qui <br> blanditiis praesentium
+                .cards
+                    .b-card
+                        .b-card__img
+                            img.card-img(src="img/contact_mail.png", alt="image")
+                            span.icon.pe-7s-mail
+                        .b-card__title
+                            h3.card-title EMAIL
+                            p.card-desc hello@codecafe.com <br> Personal@codecafe.com
+                    .b-card
+                        .b-card__img
+                            img.card-img(src="img/contact_map.png", alt="image")
+                            span.icon.pe-7s-map-marker
+                        .b-card__title
+                            h3.card-title ADDRESS
+                            p.card-desc 240 Bhatikhana, 8200 Barisal <br> Bangladesh
+                    .b-card
+                        .b-card__img
+                            img.card-img(src="img/contact_phone.png", alt="image")
+                            span.icon.pe-7s-mail
+                        .b-card__title
+                            h3.card-title PHONE
+                            p.card-desc +00 11 66 99 66 44 <br> 11 99 66 44 065
+    #c2.column
+        .conteiner
+            form(action="", method="post")
+                .column
+                    .row
+                        input(type="text", placeholder="Name")
+                        input(type="email", name="email", placeholder="Email")
+                        input(type="text", placeholder="Subject")
+                    textarea
+                    button(type="submit") SUBMIT NOW
+    #c3.column
+        .b-cover
+            .b-cover__title 
+                h3.p-title
+                    | Find us on a map 
+                    span.pe-7s-map-marker
+        iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A8bf1f53e68aa70d8a31915a1aa9268ea5cc28a7b2f94a242adc8a668f1ada763&amp;source=constructor", frameborder="0", width="100%", height="400px")

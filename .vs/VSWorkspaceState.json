@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\build",
+    "\\src",
+    "\\src\\pug",
+    "\\src\\pug\\modules",
+    "\\src\\style",
+    "\\src\\style\\partials"
+  ],
+  "SelectedNode": "\\src\\style\\partials\\_media.styl",
+  "PreviewInSolutionExplorer": false
+}

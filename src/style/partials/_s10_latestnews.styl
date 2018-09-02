@@ -1,0 +1,42 @@
+section#latestnews
+	background-image url("../img/news_bg.png")
+	background-size cover
+	background-repeat no-repeat
+	.container
+		.column
+			text-align left
+			align-items flex-start
+			margin 0px 30px
+			h3
+				margin-top 50px
+				color lightC
+			p
+				margin-top 30px
+			
+			#slider5.b-slider
+				display flex
+				flex-direction row
+				margin 80px
+				width 90%
+				.b-slider__slides
+					margin-right 80px
+					.b-slider__slide
+						p.p-title
+							color lightC
+						a
+							margin-top 50px
+							color mainC
+				.b-slider__dots
+					flex-direction column
+					.b-slider__dot
+						width 12px
+						height 12px
+						background transparent
+						border 1px solid lightC
+						margin 5px
+						&:hover
+							background lightC
+					.b-slider__dot--active
+						background lightC
+					
+			

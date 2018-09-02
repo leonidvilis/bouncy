@@ -1,0 +1,277 @@
+/*---------------------------------------*\
+            #MEDIA
+\*---------------------------------------*/
+
+//***********************************************************************
+/* xs (<=543px) */
+@media (max-width: 575px)
+    .container
+            width 100%
+            margin 0 auto
+
+    #navbar
+        .container
+            .row
+                display none
+
+        .menu-btn__container
+            display block
+    section#about
+        .container
+            .row
+                flex-direction column
+                flex-wrap wrap
+                .about
+                    margin 50px 0
+                    order 0
+                img
+                    order 1
+    section.details
+        .b-slider__slides
+            .b-slider__slide
+                .row
+                    flex-direction column
+    section#featured
+        .row
+            height 1000px
+            .b-accordeon
+                flex-direction column
+                height 1000px
+                &__item
+                    width 100%
+                    &__img
+                        width 100%
+                        height auto
+        .foot
+            height 100px
+    section#services
+        .container
+            .column
+                #slider2.b-slider--row
+                    flex-direction column
+                    margin 0 auto
+                    padding: 0
+                    .b-slider__dots
+                        flex-direction row
+                        width auto
+                        margin 0 auto
+                        .b-slider__dot
+                            width 50px
+                            margin 0 10px
+                    .b-slider__slides
+                        .b-slider__slide.b-slider__slide--row
+                            flex-wrap wrap
+                            .column
+                                width auto
+                            .row
+                                display none
+        .row
+            .container
+                .row
+                    img.mac
+                        display none
+    section#team
+        .b-slider__slide
+            .row
+                flex-direction: column
+                padding 10%
+                .column
+                    margin 0 auto    
+    // section#testimonials
+    
+    section#ourprice
+        .container
+            .column
+                .cards
+                    flex-wrap wrap
+    section#contactus
+        #c1
+            .container
+                .column
+                    .cards
+                        flex-wrap wrap
+
+
+
+//***********************************************************************
+/* sm (>=576 и <=767) */
+@media (min-width: 576px) and (max-width: 767px)
+    .container
+        width 100%
+        margin 0 auto
+
+    #navbar
+        .container
+            .row
+                display none
+                    
+
+        .menu-btn__container
+            display block
+    section#about
+        .container
+            .row
+                flex-direction column
+                flex-wrap wrap
+                .about
+                    order 0
+                img
+                    order 1
+    section.details
+        .b-slider__slides
+            .b-slider__slide
+                .row
+                    flex-direction column
+    section#featured
+        .row
+            height 1000px
+            .b-accordeon
+                flex-direction column
+                height 1000px
+                &__item
+                    width 100%
+                    &__img
+                        width 100%
+                        height auto
+        .foot
+            height 100px
+    section#services
+        .container
+            .column
+                #slider2.b-slider--row
+                    flex-direction column
+                    margin 0 auto
+                    .b-slider__dots
+                        flex-direction row
+                        width auto
+                        margin 0 auto
+                        .b-slider__dot
+                            width 50px
+                            margin 0 10px
+                    .b-slider__slides
+                        .b-slider__slide--row
+                            flex-wrap wrap
+                            .row
+                                margin 50px auto 
+    section#ourprice
+        .container
+            .column
+                .cards
+                    flex-wrap wrap
+    section#contactus
+        #c1
+            .container
+                .column
+                    .cards
+                        flex-wrap wrap
+
+//***********************************************************************
+/* md (>=768 и <=991) */
+@media (min-width: 768px) and (max-width: 991px)
+    .container
+        width 100%
+        margin 0 auto
+    #navbar
+        .container
+            .row
+                .menu
+                    height 100vh
+                    top -100vh
+                    li
+                        display block
+
+        .menu-btn__container
+            display block
+
+    section#about
+        .container
+            .row
+                flex-direction column
+                flex-wrap wrap
+                .about
+                    order 0
+                img
+                    order 1
+    section#featured
+        .row
+            height 1000px
+            .b-accordeon
+                flex-direction column
+                height 1000px
+                &__item
+                    width 100%
+                    &__img
+                        width 100%
+                        height auto
+        .foot
+            height 100px
+    section#services
+        .container
+            .column
+                #slider2.b-slider--row
+                    flex-direction column
+                    margin 0 auto
+                    .b-slider__dots
+                        flex-direction row
+                        width auto
+                        margin 0 auto
+                        .b-slider__dot
+                            width 50px
+                            margin 0 10px
+                    .b-slider__slides
+                        .b-slider__slide--row
+                            flex-wrap wrap
+                            .row
+                                margin 50px auto    
+
+    section#ourprice
+        .container
+            .column
+                .cards
+                    flex-wrap wrap
+    
+    section#contactus
+        #c1
+            .container
+                .column
+                    .cards
+                        flex-wrap wrap
+    
+
+//***********************************************************************
+/* lg (>=992 и <=1199) */
+@media (min-width: 992px) and (max-width: 1199px)
+    .container
+        width 90%
+        margin 0 auto
+    
+    #navbar
+        .menu-button
+            display none
+            opacity 0
+
+    section#services
+        .container
+            .column
+                #slider2
+                    .b-slider__slides
+                        .b-slider__slide--row
+                            margin 0 auto
+                            flex-wrap wrap
+                            .column
+                                width auto
+                                margin-right 30px
+                            .row
+                                width 80%
+                                margin 50px auto
+
+//***********************************************************************
+/* xl (>=1200) */
+@media (min-width: 1200px)
+    .container
+        width 1170px
+        margin 0 auto
+    #navbar
+        .menu-button
+            display none
+            opacity 0

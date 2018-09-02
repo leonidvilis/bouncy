@@ -1,0 +1,347 @@
+/*---------------------------------------*\
+            CONTROLS
+\*---------------------------------------*/
+
+// Элементы управления
+
+// Кнопки
+
+// Круглые кнопки
+.circle
+    height 50px
+    width 50px
+    text-decoration none
+    border-radius 50%
+    background grayC
+    text-align center
+    display flex
+    justify-content: center
+    align-items: center
+    transition: all .3s ease-in-out
+    &:hover
+        background mainC
+
+// Buttons
+.default-btn
+    padding 6px 25px
+    font-size: 1rem
+    //display block-inline
+    color grayDarkC
+    border 1px solid  grayDarkC
+    border-radius: 20px
+    text-decoration: none
+    transition: all .2s ease-in-out
+    &:hover
+        background-color mainC
+        color lightC
+        border-color mainC
+
+//____________________________________________________________________________
+// Accordeon Slider
+
+itemsCount = 4 // поменять в зависимости от того сколько картинок в слайдере
+
+.b-accordeon // Главный контейнер
+    display flex
+    width 100%
+    height 100%
+
+    &__item  // Элемент слайдера 
+        height 100%
+        width 25% 
+        overflow hidden
+        position relative
+        transition all 0.7s ease 
+
+        &:hover
+            width 35%       
+
+        &:hover .b-cover
+            background rgba(0,0,0, 0.0)
+            color rgba(0,0,0, 0.0)
+            transform translateY(-100%)
+        &__img
+            display block
+            height 100%
+
+//______________________________________________________________________
+// Блок для создания шторки на картинках
+.b-cover
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background-color rgba(0,0,0, 0.7)
+    z-index 3
+    transition all 0.7s ease-in-out
+    color grayC
+
+    &__header
+        margin 50px 15px
+        font-family mainFont
+        font-weight light
+        font-size 20px
+
+    &__text
+        margin 135px 35px
+        font-family secondFont 
+        font-style italic
+        width 400px
+
+    &:hover
+        transform: translateY(-100%)
+
+
+//_______________________________________________________________
+.b-cover--hidden
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background-color rgba(0,0,0, 0.7)
+    z-index 3
+    transform: translateY(-100%)
+    opacity 0.0
+    transition all 0.7s ease-in-out
+    color grayC
+
+    &__header
+        margin 50px 15px
+        font-family mainFont
+        font-weight light
+        font-size 20px
+
+    &__text
+        margin 135px 35px
+        font-family secondFont 
+        font-style italic
+        width 400px
+
+    &:hover
+        transform: translateY(100%)
+
+//________________________________________________________________________
+// блок для создания слайдера с кнопками
+.b-slider // Основной контейнер для элемента
+    width 100%
+    position relative
+    margin auto
+
+    .b-slider__dots
+        margin 0 auto
+        text-align center
+        display flex
+        justify-content center
+
+        .b-slider__dot
+            cursor pointer
+            height 50px
+            width 50px
+            border-radius 50%
+            background grayC
+            text-align center
+            display flex
+            justify-content: center
+            align-items: center
+            transition: background-color .3s ease-in-out
+            &:hover
+                background mainC
+
+            .icon
+                font-size: 28px
+                color lightC
+
+        .b-slider__dot--active
+            background mainC
+
+    .b-slider__slides
+        display flex
+        flex-direction column
+        text-align left
+
+        .b-slider__slide
+            display none
+        
+        .b-slider__slide--show
+            display block
+// Модификатры для второго слайдера    
+.b-slider--row
+    display flex
+    .b-slider__dots--column
+        flex-direction column
+    .b-slider__slides--row
+        flex-direction row
+        .b-slider__slide--row
+            display none
+            flex-direction row
+        .b-slider__slide--row--show
+            display flex
+
+//_______________________________________________________________________
+//Progres bar round control 
+// 
+b-roundprog-edge = 125px;
+
+.b-roundprog
+    width $b-roundprog-edge
+    margin 0 15px
+    display flex
+    flex-direction column
+
+// Контрол для галереи портфолио
+.b-gallery
+    width 100%
+    .b-gallery__toggles
+
+        .b-gallery__btn
+            background-color transparent
+            border-color: transparent
+            cursor pointer
+            padding 20px 20px
+            position relative
+            display: inline-block
+            font-weight bold
+            color grayC
+
+            &::after 
+                content: ''
+                position absolute
+                margin-bottom: 25px
+                left 0
+                bottom -20px
+                width 100%
+                border-bottom 3px solid mainC
+                transform: scaleX(0)
+                transition: all .3s linear
+
+            &:hover::after
+                transform: scaleX(1)
+    .b-gallery__grid
+        display flex
+        flex-direction column
+        .b-gallery__grid-wrap
+
+            // .b-gallery__column
+            //     flex 25%
+            //     max-width 25%
+            //     transition: all 1.3s ease
+            //     //padding 0px 5px
+
+            .b-gallery__item
+                margin-bottom 5px
+                .b-gallery__item-wrap
+                    position relative
+                    overflow hidden
+                    transition: all 1.3s ease
+                    &:hover .b-cover--hidden
+                        transform: translateY(50%)
+                        opacity 1.0
+                    .b-gallery__img
+                        vertical-align middle
+                        width 100%
+
+//____________________________________________________________________
+.b-scrollbar
+    margin-left 30px
+    float right
+    height 400px
+    width 300px
+    background lightC
+    overflow-y scroll
+    margin-botom 25px
+
+    .b-scrollbar__force-overflow
+        max-height 50px
+
+        
+.b-scrollbar::-webkit-scrollbar-track
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+    border-radius: 10px
+    background-color: #F5F5F5
+
+.b-scrollbar::-webkit-scrollbar
+    width: 12px
+    background-color: #F5F5F5
+
+.b-scrollbar::-webkit-scrollbar-thumb
+    border-radius: 10px
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3)
+    background-color: #555
+
+//__________________________________________________________________
+
+b-progressline-width = 100%
+b-progressline-height = 50px
+b-progressline-bg_color = grayC
+b-progressline-f_color = mainC
+b-progressline-procent = 70
+.b-progressline
+    display flex
+    flex-direction column
+    justify-content flex-end
+    align-items center
+    .b-progressline__wrapper-hor
+        display flex
+        justify-content space-beetwen
+        .b-progressline__legend
+            margin 0
+            display block
+    .b-progressline__wrapper
+        position relative
+        margin-top 45px
+        height 5px
+        width 100%
+        background grayC
+        .b-progressline__bar //canvas
+            width b-progressline-width
+            height b-progressline-height
+            //background b-progressline-bg_color
+            position absolute
+            top -45px
+            left 0
+
+//________________________________________________
+// Card
+.b-card
+    display flex
+    flex-direction column
+    width 235px
+    margin 0 50px
+    align-self stretch
+    overflow hidden
+    // &:hover .b-card__body
+    //     transform translateY(100%)
+    // &:hover .b-card__cover
+    //     transform translateY(0%)
+    // &:hover .b-card__title
+
+    .b-card__title
+        background mainC
+        color lightC
+        display flex
+        align-items center
+        justify-content center
+        height 67px
+        padding 10px
+        transition all .5s ease
+    .b-card__body
+        height 100%
+        background lightC
+        padding 10px
+        display flex
+        flex-direction column
+        align-items center
+        justify-content center
+        //transition all .5s ease
+    .b-card__cover
+        display flex
+        flex-direction column
+        align-items center
+        justify-content center
+        transition all .5s ease
+        transform translateY(-100%)
+        background lightC
+        padding 10px
+        

@@ -1,0 +1,73 @@
+section#team
+    background-color lightC
+    .container
+        .column
+            background-image none
+            h3
+                margin-top 50px
+            p
+                margin-top 40px
+            #slider3.b-slider
+                margin-top 50px
+                .b-slider__slides
+                    .b-slider__slide.b-slider__slide--show
+                        background lightBGC
+                        .row
+                            width 100%
+                            justify-content: space-around
+                            
+                            .img-wrapper
+                                position relative
+                                overflow hidden
+                                transition: all 1.3s ease
+                                &:hover .b-cover--hidden
+                                    transform: translateY(50%)
+                                    opacity 1.0
+                                                                        
+                                
+                                    
+                            .column
+                                background-image none
+                                align-items: flex-end
+                                text-align right
+                                width 500px
+                                h4
+                                    color grayC
+                                    font-weight bold
+                                    font-size 18px
+                                .i
+                                    font-style italic
+                                    font-weight lighter
+                                .b-progressline
+                                    width 80% 
+                                    
+                                    .b-progressline__bar
+                                        width 100%
+                .b-slider__dots
+                    margin 25px 0 50px
+                    .b-slider__dot
+                        width 12px
+                        height 12px
+                        background #fff
+                        border 1px solid mainC
+                        margin 0px 5px
+                    .b-slider__dot--active
+                        background mainC
+    .column
+        background-image url('../img/team_footer.png')
+        background-repeat no-repeat
+        background-size cover
+        position relative
+        padding 50px 0
+        
+        //height 200px
+        h4.p-title
+            color lightC
+            strong
+                color lightC
+        .default-btn
+            margin-top 30px
+            color lightC
+            border-color lightC
+        
+            
